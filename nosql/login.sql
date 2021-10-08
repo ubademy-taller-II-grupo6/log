@@ -24,8 +24,8 @@ db.createCollection("Login", {
 
 db.Login.insertOne({
     userId: "mriarte@gmail",
-    respuesta: "Inicio sesion",
-    codigo_respuesta: "404",
-    session_star_date: "25/01/2021",
-    session_end_date: "25/01/2021"
+    nivel: "Info",
+    fecha: "10/10/2021",
+    hora: "10:41:34 AM",
+    descripcion: "Usuario Logueado"
 });

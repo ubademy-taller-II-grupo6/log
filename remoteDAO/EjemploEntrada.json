@@ -1,1 +1,7 @@
-
+{
+  userId: "mriarte@gmail",
+  nivel: "Info",
+  fecha: "10/10/2021",
+  hora: "10:41:34 AM",
+  descripcion: "Usuario Logueado"
+}
