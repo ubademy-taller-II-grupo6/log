@@ -6,16 +6,16 @@ db.createCollection("Login", {
         "userId": {$type: "string", $exists: true}
       },
       {
-        "respuesta": { $type: "string", $exists: true}
+        "fecha": { $type: "string", $exists: true}
       },
       {
-        "codigo_respuesta": { $type: "string", $exists: true}
+        "hora": { $type: "string", $exists: true}
       },
       {
-        "session_star_date": { $type: "string", $exists: true}
+        "nivel": { $type: "string", $exists: true}
       },
       {
-        "session_end_date": { $type: "string", $exists: true}
+        "descripcion": { $type: "string", $exists: true}
       }
             ]
     }

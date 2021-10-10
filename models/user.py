@@ -4,6 +4,8 @@ from typing import Optional
 
 class User(BaseModel):
     id: Optional [str]
-    name: str
-    email: str
-    password: str
+    userId: str
+    nivel: str
+    fecha: str
+    hora: str
+    descripcion: str
