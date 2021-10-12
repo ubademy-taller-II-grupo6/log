@@ -12,7 +12,7 @@ Infrestrucutra usada
 Como Dockerizar:
 
 Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku
--Crear una nueva entra de login para un usuario
+*.-Crear una nueva entra de login para un usuario
 -Listar  todos los campos de todos los usuarios  que se han logueado.
 -Obtener todo  los logins de UN usuario.
 -Obtener todos los registos por un rango de fechas.
