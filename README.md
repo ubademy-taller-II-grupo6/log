@@ -20,8 +20,8 @@ $ docker build . -t app:1.0  <br/>
 $ docker images -a   <br/>
 $ docker run -p 8000:5000 app:1.0  <br/>
 
-En caso de tener  que borrar algun paquete debemos  tener el ImageId del mismo,que se ve en el paso anterior, y ejecutar
-docker rmi  550e38ba5899  , siendo "550e38ba5899" el ImageId del paquete <br/>
+En caso de tener  que borrar algun paquete debemos  tener el ImageId del mismo,que se ve en el paso anterior, y ejecutar:<br/>
+$docker rmi  550e38ba5899, siendo "550e38ba5899" el ImageId del paquete <br/>
 
 ##### **Como realizar el deploy en heroku:**
 heroku container:login <br/>
@@ -33,6 +33,8 @@ heroku container:release web -a aqueous-everglades-25138<br/>
 Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<br/>
 
 -Crear una nueva entrada de login para un usuario. <br/>
+El json de entrada debe tener esta estructura 
+Se instancia
 -Listar  todos los campos de todos los usuarios  que se han logueado. <br/>
 -Obtener todo  los logins de UN usuario.<br/>
 -Obtener todos los registos por un rango de fechas.<br/>
