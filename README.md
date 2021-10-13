@@ -9,12 +9,13 @@ Librerias usadas:<br/>
 -Heroku <br/>
 -Mongo atlas<br/>
 
-##### **Como Dockerizar:**
+##### **Como Dockerizar:**<br/><br/>
 -Instalar docker en el sistema operativo ( es nuestro caso sera linux Ubuntu pero puede ser cualquier otro).<br/>
 -Instalar heroku en el sistema operativo.<br/>
 -Instalar todos los paquetes explicatados en el archivo "requerimets.txt".<br/>
 -Crear un docker file.(Se incluye en este repositorio).<br/>
 -Ejecutar en la consola de comandos de linux o similar: <br/>
+<br/>
 Dentro de la carpeta del proyecto (en nuestro caso sera "PycharmProjects/log")<br/>
 $ docker build . -t app:1.0  <br/>
 $ docker images -a   <br/>
@@ -22,18 +23,18 @@ $ docker run -p 8000:5000 app:1.0  <br/>
 
 En caso de tener  que borrar algun paquete debemos  tener el ImageId del mismo,que se ve en el paso anterior, y ejecutar:<br/>
 $docker rmi  550e38ba5899, siendo "550e38ba5899" el ImageId del paquete <br/>
-
+<br/>
 ##### **Como realizar el deploy en heroku:**
 heroku container:login <br/>
 heroku container:push web -a aqueous-everglades-25138<br/>
 heroku create<br/>
 
 heroku container:release web -a aqueous-everglades-25138<br/>
-##### **Descripcion de los ENDPOINTS:**
+##### **Descripcion de los ENDPOINTS:** <br/>
 Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<br/>
 
 **-Crear una nueva entrada de login para un usuario.** <br/>
-Se da de alta una nueva entra en el log, que contiene, el Id de usuario (usamos el mail), nivel del incidente (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.
+Se da de alta una nueva entra en el log, que contiene, el Id de usuario (usamos el mail), nivel del incidente (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.<br/>
 
 Hacemos un POST a esta direcion<br/>
 https://aqueous-everglades-25138.herokuapp.com/users <br/>
