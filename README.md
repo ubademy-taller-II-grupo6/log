@@ -32,18 +32,25 @@ heroku container:release web -a aqueous-everglades-25138<br/>
 ##### **Descripcion de los ENDPOINTS:**
 Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<br/>
 
--Crear una nueva entrada de login para un usuario. <br/>
-Hacemos un post a esta direcion https://aqueous-everglades-25138.herokuapp.com/users <br/>
+**-Crear una nueva entrada de login para un usuario.** <br/>
+Se da de alta una nueva entra en el log, que contiene, el Id de usuario (usamos el mail), nivel del incidente (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.
+
+Hacemos un POST a esta direcion<br/>
+https://aqueous-everglades-25138.herokuapp.com/users <br/>
 El json de entrada debe tener esta estructura <br/>
 {<br/>
   "userId": "pininoMas@hotmail.com",<br/>
   "nivel": "Info",<br/>
   "fecha": "10/10/2021",<br/>
   "hora": "10:41:34 AM",<br/>
-  "descripcion": "Usuario logueda con exito"<br/>
-}
+  "descripcion": "Usuario logueado con exito"<br/>
+}<br/>
 
--Listar  todos los campos de todos los usuarios  que se han logueado. <br/>
+**-Listar todos los campos de todos los usuarios  que se han logueado.** <br/>
+Hacemos un GET a esta direcion<br/>
+o directamente pegamos esta direccion al navegador o POSTMAN o gestor de http<br/>
+https://aqueous-everglades-25138.herokuapp.com/users
+
 -Obtener todo  los logins de UN usuario.<br/>
 -Obtener todos los registos por un rango de fechas.<br/>
 -Obtener todos los registros por rango de hora.<br/>
