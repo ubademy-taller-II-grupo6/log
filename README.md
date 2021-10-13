@@ -1,5 +1,5 @@
 # log
-Este respositiorio integra servicios en la nube  utilizando atlas + mongo db; exponenos un conjutno de end poits para utilizar<br/> 
+Este respositiorio integra servicios en la nube  utilizando atlas + mongo db; exponenos un conjunto de end poits para utilizar<br/> 
 Librerias usadas:<br/> 
 -FastApi<br/>
 -uvicorn<br/>
@@ -33,8 +33,16 @@ heroku container:release web -a aqueous-everglades-25138<br/>
 Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<br/>
 
 -Crear una nueva entrada de login para un usuario. <br/>
-El json de entrada debe tener esta estructura 
-Se instancia
+Hacemos un post a esta direcion https://aqueous-everglades-25138.herokuapp.com/users <br/>
+El json de entrada debe tener esta estructura <br/>
+{<br/>
+  "userId": "pininoMas@hotmail.com",<br/>
+  "nivel": "Info",<br/>
+  "fecha": "10/10/2021",<br/>
+  "hora": "10:41:34 AM",<br/>
+  "descripcion": "Usuario logueda con exito"<br/>
+}
+
 -Listar  todos los campos de todos los usuarios  que se han logueado. <br/>
 -Obtener todo  los logins de UN usuario.<br/>
 -Obtener todos los registos por un rango de fechas.<br/>
