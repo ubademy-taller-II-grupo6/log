@@ -55,7 +55,10 @@ Nos devolvera un Json con todos los campos de todos los usuario. O sea todas las
 
 **-Obtener todo  los logins de UN usuario.**<br/>
 Enviamos el userId  de esta forma y nos devolvera todas las entradas al log que tenga ese usuario <br/>
-https://aqueous-everglades-25138.herokuapp.com/users/mriarte@gmail <br/>
+https://aqueous-everglades-25138.herokuapp.com/users/userId <br/>
+Por ejemplo si quiero las entradas para el user mriarte@gmail.com <br/>
+debere construir el path de esta forma <br/>
+https://aqueous-everglades-25138.herokuapp.com/users/mriarte@gmail.com <br/>
 
 Resta implemntar: <br/>
 
