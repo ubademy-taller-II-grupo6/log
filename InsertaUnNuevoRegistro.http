@@ -1,0 +1,4 @@
+POST https://aqueous-everglades-25138.herokuapp.com/users
+Content-Type: application/json
+
+{ "userId": "pininoMas@hotmail.com", "nivel": "Info", "fecha": "10/10/2021", "hora": "10:41:34 AM", "descripcion": "Usuario Logueado"}
