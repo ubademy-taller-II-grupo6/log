@@ -49,9 +49,15 @@ El json de entrada debe tener esta estructura <br/>
 **-Listar todos los campos de todos los usuarios  que se han logueado.** <br/>
 Hacemos un GET a esta direcion<br/>
 o directamente pegamos esta direccion al navegador o POSTMAN o gestor de http<br/>
-https://aqueous-everglades-25138.herokuapp.com/users
+https://aqueous-everglades-25138.herokuapp.com/users<br/>
+Nos devolvera un Json con todos los campos de todos los usuario. O sea todas las entradas e incidetentes de todos los usuarios del sistema.<br/>
 
--Obtener todo  los logins de UN usuario.<br/>
+**-Obtener todo  los logins de UN usuario.**<br/>
+Enviamos el userId  de esta forma y nos devolvera todas las entradas al log que tenga ese usuario <br/>
+https://aqueous-everglades-25138.herokuapp.com/users/mriarte@gmail <br/>
+
+Resta implemntar: <br/>
+
 -Obtener todos los registos por un rango de fechas.<br/>
 -Obtener todos los registros por rango de hora.<br/>
 -Obtener todos los registros por NIVEL de incidente.<br/>
