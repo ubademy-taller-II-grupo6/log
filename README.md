@@ -31,6 +31,7 @@ $ heroku créate "nombre de la aplicacion"   Esto crea una aplicaion en heroku (
 $ heroku container:push web -a "nombre de la aplicacion"<br/>  
 Por ejemplo: <br/>
 $ heroku container:push web -a aqueous-everglades-25138<br/>
+y finalmente:<br/>
 $ heroku container:release web -a "nombre de la aplicacion" <br/>
 <br/>
 ##### **Descripcion de los ENDPOINTS:** <br/>
