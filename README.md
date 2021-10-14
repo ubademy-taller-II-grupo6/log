@@ -25,11 +25,14 @@ En caso de tener  que borrar algun paquete debemos  tener el ImageId del mismo,q
 $docker rmi  550e38ba5899, siendo "550e38ba5899" el ImageId del paquete <br/>
 <br/>
 ##### **Como realizar el deploy en heroku:**
-heroku container:login <br/>
-heroku container:push web -a aqueous-everglades-25138<br/>
-heroku create<br/>
-
-heroku container:release web -a aqueous-everglades-25138<br/>
+$ heroku login <br/>
+$ heroku container:login <br/>
+$ heroku créate "nombre de la aplicacion"   Esto crea una aplicaion en heroku (si no se especifica nada se le asinganra un nombre automatico)<br/>
+$ heroku container:push web -a "nombre de la aplicacion"<br/>  
+Por ejemplo: <br/>
+$ heroku container:push web -a aqueous-everglades-25138<br/>
+$ heroku container:release web -a "nombre de la aplicacion" <br/>
+<br/>
 ##### **Descripcion de los ENDPOINTS:** <br/>
 Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<br/>
 
