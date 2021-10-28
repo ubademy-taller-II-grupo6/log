@@ -47,7 +47,7 @@ Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<
 Se da de alta una nueva entra en el log, que contiene, el Id de usuario (usamos el mail), nivel del incidente (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.<br/>
 
 Hacemos un POST a esta direcion<br/>
-https://aqueous-everglades-25138.herokuapp.com/users <br/>
+https://ubademy-log.herokuapp.com/log <br/>
 El json de entrada debe tener esta estructura <br/>
 {<br/>
   "userId": "pininoMas@hotmail.com",<br/>
@@ -58,18 +58,18 @@ El json de entrada debe tener esta estructura <br/>
 }<br/>
 
 
-**-Obtener todo  los logins de UN usuario.**<br/>
+**-Obtener las entradas de UN usuario.**<br/>
 Enviamos el userId  de esta forma y nos devolvera todas las entradas al log que tenga ese usuario <br/>
-https://aqueous-everglades-25138.herokuapp.com/users/userId <br/>
+https://ubademy-log.herokuapp.com/log/user/{userId} <br/>
 Por ejemplo si quiero las entradas para el user mriarte@gmail.com <br/>
 debere construir el path de esta forma <br/>
-https://aqueous-everglades-25138.herokuapp.com/users/mriarte@gmail.com <br/>
+https://ubademy-log.herokuapp.com/log/user/mriarte@gmail.com <br/>
 
 **-Obtener todos los registros por NIVEL de incidente**.<br/>
 Enviamos el nivel por el cual queremos agrupar y nos devolvera todas las entradas al log que tenga ese nivel de entrada <br/>
-https://aqueous-everglades-25138.herokuapp.com/log/nivel <br/>
+https://ubademy-log.herokuapp.com/log/{nivel} <br/>
 Por ejemplo si quiero las entradas para el nivel "Debug" <br/>
 nos armamos el path asi:<br/>
-https://aqueous-everglades-25138.herokuapp.com/log/Debug
+https://ubademy-log.herokuapp.com/log/Debug
 <br/>
 
