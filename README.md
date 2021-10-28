@@ -25,13 +25,19 @@ En caso de tener  que borrar algun paquete debemos  tener el ImageId del mismo,q
 $docker rmi  550e38ba5899, siendo "550e38ba5899" el ImageId del paquete <br/>
 <br/>
 ##### **Como realizar el deploy en heroku:**
-$ heroku login <br/>
-$ heroku container:login <br/>
-$ heroku créate "nombre de la aplicacion"   Esto crea una aplicaion en heroku (si no se especifica nada se le asinganra un nombre automatico)<br/>
+Dentro de la carpeta del proycto (ejemplo PycharmProjects/log")  desde la terminar ejecutar  <br/>
+Login:<br/>
+PycharmProjects/log$ heroku login <br/>
+Entro en el contenedor <br/>
+PycharmProjects/log$ heroku container:login <br/>
+Creo una aplicaion en heroku (si no se especifica nada se le asinganra un nombre automatico)<br/>
+$ heroku créate "nombre de la aplicacion" <br/>
+Subo el proyecto dockerizado <br/>
 $ heroku container:push web -a "nombre de la aplicacion"<br/>  
+
 Por ejemplo: <br/>
 $ heroku container:push web -a aqueous-everglades-25138<br/>
-y finalmente:<br/>
+y finalmente si es una actualizacion:<br/>
 $ heroku container:release web -a "nombre de la aplicacion" <br/>
 <br/>
 ##### **Descripcion de los ENDPOINTS:** <br/>
