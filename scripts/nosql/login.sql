@@ -6,16 +6,16 @@ db.createCollection("Login", {
         "userId": {$type: "string", $exists: true}
       },
       {
-        "fecha": { $type: "string", $exists: true}
+        "date": { $type: "string", $exists: true}
       },
       {
-        "hora": { $type: "string", $exists: true}
+        "hour": { $type: "string", $exists: true}
       },
       {
-        "nivel": { $type: "string", $exists: true}
+        "type": { $type: "string", $exists: true}
       },
       {
-        "descripcion": { $type: "string", $exists: true}
+        "description": { $type: "string", $exists: true}
       }
             ]
     }
@@ -24,8 +24,8 @@ db.createCollection("Login", {
 
 db.Login.insertOne({
     userId: "mriarte@gmail",
-    nivel: "Info",
-    fecha: "10/10/2021",
-    hora: "10:41:34 AM",
-    descripcion: "Usuario Logueado"
+    type: "Info",
+    date: "10/10/2021",
+    hour: "10:41:34 AM",
+    description: "Usuario Logueado"
 });

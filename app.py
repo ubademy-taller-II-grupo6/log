@@ -1,5 +1,7 @@
+import os
+import uvicorn
 from fastapi import FastAPI
-from routers.user import user
+from routers.log import log
 
 app = FastAPI(
             title= "Ubademy-Log de usuarios",
@@ -7,6 +9,10 @@ app = FastAPI(
             version=1.0
               )
 
-app.include_router(user)
+app.include_router(log)
+
+if __name__ == '__main__':
+    uvicorn.run('app:app', host='0.0.0.0', port=int(os.environ.get('PORT')), reload=True)
+
 
 
