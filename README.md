@@ -25,11 +25,15 @@ En caso de tener  que borrar algun paquete debemos  tener el ImageId del mismo,q
 $docker rmi  550e38ba5899, siendo "550e38ba5899" el ImageId del paquete <br/>
 <br/>
 ##### **Como realizar el deploy en heroku:**
-heroku container:login <br/>
-heroku container:push web -a aqueous-everglades-25138<br/>
-heroku create<br/>
-
-heroku container:release web -a aqueous-everglades-25138<br/>
+$ heroku login <br/>
+$ heroku container:login <br/>
+$ heroku créate "nombre de la aplicacion"   Esto crea una aplicaion en heroku (si no se especifica nada se le asinganra un nombre automatico)<br/>
+$ heroku container:push web -a "nombre de la aplicacion"<br/>  
+Por ejemplo: <br/>
+$ heroku container:push web -a aqueous-everglades-25138<br/>
+y finalmente:<br/>
+$ heroku container:release web -a "nombre de la aplicacion" <br/>
+<br/>
 ##### **Descripcion de los ENDPOINTS:** <br/>
 Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<br/>
 
@@ -47,11 +51,6 @@ El json de entrada debe tener esta estructura <br/>
   "descripcion": "Usuario logueado con exito"<br/>
 }<br/>
 
-**-Listar todos los campos de todos los usuarios  que se han logueado.** <br/>
-Hacemos un GET a esta direcion<br/>
-o directamente pegamos esta direccion al navegador o POSTMAN o gestor de http<br/>
-https://aqueous-everglades-25138.herokuapp.com/users<br/>
-Nos devolvera un Json con todos los campos de todos los usuario. O sea todas las entradas e incidetentes de todos los usuarios del sistema.<br/>
 
 **-Obtener todo  los logins de UN usuario.**<br/>
 Enviamos el userId  de esta forma y nos devolvera todas las entradas al log que tenga ese usuario <br/>
@@ -60,10 +59,11 @@ Por ejemplo si quiero las entradas para el user mriarte@gmail.com <br/>
 debere construir el path de esta forma <br/>
 https://aqueous-everglades-25138.herokuapp.com/users/mriarte@gmail.com <br/>
 
-Resta implemntar: <br/>
-
--Obtener todos los registos por un rango de fechas.<br/>
--Obtener todos los registros por rango de hora.<br/>
--Obtener todos los registros por NIVEL de incidente.<br/>
--Obtener todos los registros por rango de hora y rango de fecha <br/>
+**-Obtener todos los registros por NIVEL de incidente**.<br/>
+Enviamos el nivel por el cual queremos agrupar y nos devolvera todas las entradas al log que tenga ese nivel de entrada <br/>
+https://aqueous-everglades-25138.herokuapp.com/log/nivel <br/>
+Por ejemplo si quiero las entradas para el nivel "Debug" <br/>
+nos armamos el path asi:<br/>
+https://aqueous-everglades-25138.herokuapp.com/log/Debug
+<br/>
 
