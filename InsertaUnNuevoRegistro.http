@@ -1,4 +1,4 @@
-POST https://aqueous-everglades-25138.herokuapp.com/users
+POST https://ubademy-log.herokuapp.com/log
 Content-Type: application/json
 
-{ "userId": "pininoMas@hotmail.com", "nivel": "Info", "fecha": "10/10/2021", "hora": "10:41:34 AM", "descripcion": "Usuario Logueado"}
+{"userId": "ICfowjTE50V8uLXB1ruoxycokkh2", "fecha": "07/11/21", "hora": "00:23:02 AM", "nivel": "Info", "descripcion": "Se creo un nuevo usuario"}

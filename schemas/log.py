@@ -6,9 +6,9 @@ def entryEntity (item) -> dict:
     return {
         "id": str(item["_id"]),
         "userId": item["userId"],
-        "nivel": item["nivel"],
         "fecha": item["fecha"],
         "hora": item["hora"],
+        "nivel": item["nivel"],
         "descripcion": item["descripcion"]
     }
 

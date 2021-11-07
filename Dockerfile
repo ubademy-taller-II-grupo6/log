@@ -8,5 +8,5 @@ COPY ./app.py ./
 COPY ./requirements.txt ./
 RUN pip install -r requirements.txt
 RUN pip install pymongo[srv]
-ENV PORT=$PORT
+ENV PORT=5000
 CMD [ "python3", "app.py" ]
