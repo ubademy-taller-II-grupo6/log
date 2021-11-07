@@ -52,26 +52,28 @@ $ heroku container:release web -a "nombre de la aplicacion" <br/>
 Se exponens los siguientes endpoints en las siguientes URL, utilizando heroku:<br/>
 
 **-Crear una nueva entrada en el log.** <br/>
-Se da de alta una nueva entrada en el log, la cual contiene, el Id de usuario (usamos el userId de firebase o cualquier string), nivel del incidente (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.<br/>
+Se da de alta una nueva entrada en el log, la cual contiene, el Id de usuario (usamos el userId de firebase o cualquier string), nivel del incidente<br/> (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.<br/>
+Para el nivel de incidente se acepta cualquier combinacion ya que es case unsensitive (o sea acepta "Info","iNFO",etc)<br/>
 
 Hacemos un POST a esta direcion<br/>
 https://ubademy-log.herokuapp.com/log <br/>
 El json de entrada debe tener esta estructura <br/>
 {<br/>
-  "userId": "pininoMas@hotmail.com",<br/>
+  "userId": "ICfowjTE50V8uLXB1ruoxycokkh2",<br/>
+  "fecha": "07/11/21",<br/>
+  "hora": "00:23:02 AM",<br/>
   "nivel": "Info",<br/>
-  "fecha": "10/10/2021",<br/>
-  "hora": "10:41:34 AM",<br/>
-  "descripcion": "Usuario logueado con exito"<br/>
-}<br/>
+  "descripcion": "Se creo un nuevo usuario"<br/>
+}"<br/>
 
+Esta estrucutra tambien esta en el archivo input.json del proyecto<br/>
 
 **-Obtener las entradas de UN usuario.**<br/>
 Enviamos el userId  de esta forma y nos devolvera todas las entradas al log que tenga ese usuario <br/>
 https://ubademy-log.herokuapp.com/log/user/{userId} <br/>
-Por ejemplo si quiero las entradas para el user mriarte@gmail.com <br/>
+Por ejemplo si quiero las entradas para el usuario de Id "ICfowjTE50V8uLXB1ruoxycokkh2"  <br/>
 debere construir el path de esta forma <br/>
-https://ubademy-log.herokuapp.com/log/user/mriarte@gmail.com <br/>
+https://ubademy-log.herokuapp.com/log/user/ICfowjTE50V8uLXB1ruoxycokkh2 <br/>
 
 **-Obtener todos los registros por NIVEL de incidente**.<br/>
 Enviamos el nivel por el cual queremos agrupar y nos devolvera todas las entradas al log que tenga ese nivel de entrada <br/>
