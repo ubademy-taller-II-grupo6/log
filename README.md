@@ -1,4 +1,4 @@
-# log
+# Log
 Este respositiorio integra servicios en la nube  utilizando atlas + mongo db; exponenos un conjunto de end poits para utilizar<br/> 
 Librerias usadas:<br/> 
 -FastApi<br/>
@@ -12,14 +12,14 @@ Librerias usadas:<br/>
 
 #####  **Como crear la base de datos mongo**
 Sobre un cluster atlas, usamos mongo 4.4.10 , creamos una db y el esquema a usar (En nuestro caso sera ubademiLog).<br/>
-Desde nuestro IDE ejecutamos el script "log.sql" que esta en este respositorio.<br/>
+Desde nuestro IDE o administrador de DBs, seleccionos nuestra db y ejecutamos el script "log.sql" que esta en este respositorio.<br/>
 Este nos creara la collection "Log" y un documento (registro) inicial en la collection <br/>
 
 
 ##### **Como Dockerizar:**<br/><br/>
 -Instalar docker en el sistema operativo ( es nuestro caso sera linux Ubuntu pero puede ser cualquier otro).<br/>
 -Instalar heroku en el sistema operativo.<br/>
--Instalar todos los paquetes explicatados en el archivo "requerimets.txt".<br/>
+-Instalar todos los paquetes explicatados en el archivo "requerimets.txt" (Se incluye en este repositorio).<br/>
 -Crear un docker file.(Se incluye en este repositorio).<br/>
 -Ejecutar en la consola de comandos de linux o similar: <br/>
 <br/>
@@ -38,20 +38,21 @@ PycharmProjects/log$ heroku login <br/>
 Entro en el contenedor <br/>
 PycharmProjects/log$ heroku container:login <br/>
 Creo una aplicaion en heroku (si no se especifica nada se le asinganra un nombre automatico)<br/>
-$ heroku créate "nombre de la aplicacion" <br/>
-Subo el proyecto dockerizado <br/>
+$ heroku create "nombre de la aplicacion" <br/>
+Subo el proyecto <br/>
 $ heroku container:push web -a "nombre de la aplicacion"<br/>  
 
 Por ejemplo: <br/>
 $ heroku container:push web -a aqueous-everglades-25138<br/>
-y finalmente si es una actualizacion:<br/>
+y finalmente si es una actualizacion en vez de crea la app y hacer el push, solo hacemos:<br/>
 $ heroku container:release web -a "nombre de la aplicacion" <br/>
 <br/>
+**NOTA:No hace falta dockerizarlo previamente.**<br/>
 ##### **Descripcion de los ENDPOINTS:** <br/>
-Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<br/>
+Se exponens los siguientes endpoints en las siguientes URL, utilizando heroku:<br/>
 
-**-Crear una nueva entrada de login para un usuario.** <br/>
-Se da de alta una nueva entra en el log, que contiene, el Id de usuario (usamos el mail), nivel del incidente (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.<br/>
+**-Crear una nueva entrada en el log.** <br/>
+Se da de alta una nueva entrada en el log, la cual contiene, el Id de usuario (usamos el userId de firebase o cualquier string), nivel del incidente (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.<br/>
 
 Hacemos un POST a esta direcion<br/>
 https://ubademy-log.herokuapp.com/log <br/>
