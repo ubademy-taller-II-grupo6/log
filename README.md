@@ -11,7 +11,7 @@ Librerias usadas:<br/>
 -Mongo atlas<br/>
 
 #####  **Como crear la base de datos mongo**
-Sobre un cluster atlas, usamos mongo 4.4.10 , creamos una db y el esquema a usar (En nuestro caso sera ubademiLog).<br/>
+Sobre un cluster atlas, usamos mongo 4.4.10 , creamos una db y el esquema a usar (En nuestro caso sera ubademyLog).<br/>
 https://www.freecodecamp.org/espanol/news/tutorial-de-mongodb-atlas-como-empezar/<br/>
 Desde nuestro IDE o administrador de DBs, levantamos nuestra base de datos, seleccionos nuestra db y ejecutamos el script "log.sql" que esta en este respositorio.<br/>
 Este nos creara la collection "Log" y un documento (registro) inicial en la collection <br/>
