@@ -12,7 +12,8 @@ Librerias usadas:<br/>
 
 #####  **Como crear la base de datos mongo**
 Sobre un cluster atlas, usamos mongo 4.4.10 , creamos una db y el esquema a usar (En nuestro caso sera ubademiLog).<br/>
-Desde nuestro IDE o administrador de DBs, seleccionos nuestra db y ejecutamos el script "log.sql" que esta en este respositorio.<br/>
+https://www.freecodecamp.org/espanol/news/tutorial-de-mongodb-atlas-como-empezar/<br/>
+Desde nuestro IDE o administrador de DBs, levantamos nuestra base de datos, seleccionos nuestra db y ejecutamos el script "log.sql" que esta en este respositorio.<br/>
 Este nos creara la collection "Log" y un documento (registro) inicial en la collection <br/>
 
 
@@ -32,7 +33,7 @@ En caso de tener  que borrar algun paquete debemos  tener el ImageId del mismo,q
 $docker rmi  550e38ba5899, siendo "550e38ba5899" el ImageId del paquete <br/>
 <br/>
 ##### **Como realizar el deploy en heroku:**
-Dentro de la carpeta del proycto (ejemplo PycharmProjects/log")  desde la terminar ejecutar  <br/>
+Dentro de la carpeta del proycto (ejemplo PycharmProjects/log") desde la terminal ejecutar  <br/>
 Login:<br/>
 PycharmProjects/log$ heroku login <br/>
 Entro en el contenedor <br/>
@@ -44,12 +45,12 @@ $ heroku container:push web -a "nombre de la aplicacion"<br/>
 
 Por ejemplo: <br/>
 $ heroku container:push web -a aqueous-everglades-25138<br/>
-y finalmente si es una actualizacion en vez de crea la app y hacer el push, solo hacemos:<br/>
+y finalmente si es una actualizacion ,en vez de crear la app y hacer el push, solo hacemos:<br/>
 $ heroku container:release web -a "nombre de la aplicacion" <br/>
 <br/>
-**NOTA:No hace falta dockerizarlo previamente.**<br/>
+**NOTA:No hace falta dockerizar el proyecto previamente.**<br/>
 ##### **Descripcion de los ENDPOINTS:** <br/>
-Se exponens los siguientes endpoints en las siguientes URL, utilizando heroku:<br/>
+Se exponen los siguientes endpoints en las siguientes URL, utilizando heroku:<br/>
 
 **-Crear una nueva entrada en el log.** <br/>
 Se da de alta una nueva entrada en el log, la cual contiene, el Id de usuario (usamos el userId de firebase o cualquier string), nivel del incidente<br/> (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.<br/>
