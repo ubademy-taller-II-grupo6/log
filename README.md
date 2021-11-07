@@ -4,10 +4,17 @@ Librerias usadas:<br/>
 -FastApi<br/>
 -uvicorn<br/>
 -Docker<br/>
+-Pymongo<br/>
 
 ##### **Infrestrucutra usada**
 -Heroku <br/>
 -Mongo atlas<br/>
+
+#####  **Como crear la base de datos mongo**
+Sobre un cluster atlas, usamos mongo 4.4.10 , creamos una db y el esquema a usar (En nuestro caso sera ubademiLog).<br/>
+Desde nuestro IDE ejecutamos el script "log.sql" que esta en este respositorio.<br/>
+Este nos creara la collection "Log" y un documento (registro) inicial en la collection <br/>
+
 
 ##### **Como Dockerizar:**<br/><br/>
 -Instalar docker en el sistema operativo ( es nuestro caso sera linux Ubuntu pero puede ser cualquier otro).<br/>
