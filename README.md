@@ -25,13 +25,19 @@ En caso de tener  que borrar algun paquete debemos  tener el ImageId del mismo,q
 $docker rmi  550e38ba5899, siendo "550e38ba5899" el ImageId del paquete <br/>
 <br/>
 ##### **Como realizar el deploy en heroku:**
-$ heroku login <br/>
-$ heroku container:login <br/>
-$ heroku créate "nombre de la aplicacion"   Esto crea una aplicaion en heroku (si no se especifica nada se le asinganra un nombre automatico)<br/>
+Dentro de la carpeta del proycto (ejemplo PycharmProjects/log")  desde la terminar ejecutar  <br/>
+Login:<br/>
+PycharmProjects/log$ heroku login <br/>
+Entro en el contenedor <br/>
+PycharmProjects/log$ heroku container:login <br/>
+Creo una aplicaion en heroku (si no se especifica nada se le asinganra un nombre automatico)<br/>
+$ heroku créate "nombre de la aplicacion" <br/>
+Subo el proyecto dockerizado <br/>
 $ heroku container:push web -a "nombre de la aplicacion"<br/>  
+
 Por ejemplo: <br/>
 $ heroku container:push web -a aqueous-everglades-25138<br/>
-y finalmente:<br/>
+y finalmente si es una actualizacion:<br/>
 $ heroku container:release web -a "nombre de la aplicacion" <br/>
 <br/>
 ##### **Descripcion de los ENDPOINTS:** <br/>
@@ -41,7 +47,7 @@ Se exponens los siguientes endpoints en las siguientes URL , utilizando heroku:<
 Se da de alta una nueva entra en el log, que contiene, el Id de usuario (usamos el mail), nivel del incidente (INFO,WARNG,DEBUG,ERROR), fecha y hora en que el incidente se dio en el server, y una descripcion del mismo.<br/>
 
 Hacemos un POST a esta direcion<br/>
-https://aqueous-everglades-25138.herokuapp.com/users <br/>
+https://ubademy-log.herokuapp.com/log <br/>
 El json de entrada debe tener esta estructura <br/>
 {<br/>
   "userId": "pininoMas@hotmail.com",<br/>
@@ -52,18 +58,18 @@ El json de entrada debe tener esta estructura <br/>
 }<br/>
 
 
-**-Obtener todo  los logins de UN usuario.**<br/>
+**-Obtener las entradas de UN usuario.**<br/>
 Enviamos el userId  de esta forma y nos devolvera todas las entradas al log que tenga ese usuario <br/>
-https://aqueous-everglades-25138.herokuapp.com/users/userId <br/>
+https://ubademy-log.herokuapp.com/log/user/{userId} <br/>
 Por ejemplo si quiero las entradas para el user mriarte@gmail.com <br/>
 debere construir el path de esta forma <br/>
-https://aqueous-everglades-25138.herokuapp.com/users/mriarte@gmail.com <br/>
+https://ubademy-log.herokuapp.com/log/user/mriarte@gmail.com <br/>
 
 **-Obtener todos los registros por NIVEL de incidente**.<br/>
 Enviamos el nivel por el cual queremos agrupar y nos devolvera todas las entradas al log que tenga ese nivel de entrada <br/>
-https://aqueous-everglades-25138.herokuapp.com/log/nivel <br/>
+https://ubademy-log.herokuapp.com/log/{nivel} <br/>
 Por ejemplo si quiero las entradas para el nivel "Debug" <br/>
 nos armamos el path asi:<br/>
-https://aqueous-everglades-25138.herokuapp.com/log/Debug
+https://ubademy-log.herokuapp.com/log/Debug
 <br/>
 
